@@ -28,6 +28,25 @@ The system uses IoT technology to monitor sensor data and prevent the vehicle fr
 ## 🧠 System Architecture
 Driver Breath → MQ3 Sensor → Arduino → IoT Communication → ML Model → Decision → Vehicle Control
 
+## 🌐 IoT Cloud Integration
+
+This project uses ThingSpeak to store and monitor real-time sensor data from the alcohol detection system.
+
+The MQ3 alcohol sensor sends data from the Arduino/NodeMCU to the ThingSpeak cloud platform where the readings are stored and visualized as graphs.
+
+### Features
+- Real-time alcohol detection data upload
+- Cloud-based monitoring
+- Graph visualization of sensor values
+
+### Data Flow
+Driver Breath → MQ3 Sensor → Arduino/NodeMCU → WiFi → ThingSpeak Cloud → Machine Learning Analysis
+
+### ThingSpeak Channel
+You can view the sensor data here:
+
+https://thingspeak.com/channels/3170982
+
 ## 📂 Project Structure
 Drink-and-Drive-Detection-System/
 │
