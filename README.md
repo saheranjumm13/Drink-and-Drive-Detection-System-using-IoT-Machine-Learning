@@ -28,6 +28,37 @@ The system uses IoT technology to monitor sensor data and prevent the vehicle fr
 ## 🧠 System Architecture
 Driver Breath → MQ3 Sensor → Arduino → IoT Communication → ML Model → Decision → Vehicle Control
 
+## 🔄 Project Workflow
+
+1. **Driver Interaction**  
+The driver attempts to start the vehicle. The MQ-3 alcohol sensor is placed near the steering wheel to detect alcohol from the driver's breath.
+
+2. **Alcohol Detection**  
+The MQ-3 sensor measures alcohol concentration and sends the data to the microcontroller.
+
+3. **Microcontroller Processing**  
+The Arduino / NodeMCU reads the sensor values and processes the alcohol level data.
+
+4. **IoT Data Transmission**  
+The processed data is transmitted to the cloud platform (ThingSpeak) using WiFi connectivity.
+
+5. **Cloud Data Monitoring**  
+ThingSpeak stores and visualizes the alcohol sensor data using graphs.
+
+6. **Machine Learning Analysis**  
+The collected data is used by a machine learning model to classify the driver's condition.
+
+7. **Decision Making**  
+If alcohol level exceeds the threshold:
+- Vehicle ignition is disabled
+- Alert system is activated
+
+If alcohol is not detected:
+- Vehicle ignition is allowed.
+
+8. **Alert System**  
+A buzzer alert is triggered and the data is stored in the cloud for monitoring.
+
 ## 🌐 IoT Cloud Integration
 
 This project uses ThingSpeak to store and monitor real-time sensor data from the alcohol detection system.
